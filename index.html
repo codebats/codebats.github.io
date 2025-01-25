@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Will you be my Valentine?</h3>
+    <img class="gif" alt="gif" src="https://media.tenor.com/9_Cuwoj-m5wAAAAi/cute-cat.gif" />
+    <div class="btn-group">
+        <button class="yes-btn">Yes</button>
+        <button class="no-btn">No</button>
+    </div>
+    <script>
+        noBtn.addEventListener("mouseover", () => {
+            const wrapper = document.querySelector(".wrapper");
+            const wrapperRect = wrapper.getBoundingClientRect();
+            const noBtnRect = noBtn.getBoundingClientRect();
+
+            // Calculate max positions to ensure the button stays within the wrapper
+            const maxX = wrapperRect.width - noBtnRect.width;
+            const maxY = wrapperRect.height - noBtnRect.height;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            noBtn.style.left = randomX + "px";
+            noBtn.style.top = randomY + "px";
+        });
+    </script>
+</body>
+
+</html>
