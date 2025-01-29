@@ -16,10 +16,11 @@
     <h3>Will you be my Valentine?</h3>
     <img class="gif" alt="gif" src="https://media.tenor.com/9_Cuwoj-m5wAAAAi/cute-cat.gif" />
     <div class="btn-group">
-        <button class="yes-btn">Yes</button>
+        <button class="yes-btn">Yes!</button>
         <button class="no-btn">No</button>
     </div>
     <script>
+        const noBtn = document.querySelector(".no-btn");
         noBtn.addEventListener("mouseover", () => {
             const wrapper = document.querySelector(".wrapper");
             const wrapperRect = wrapper.getBoundingClientRect();
