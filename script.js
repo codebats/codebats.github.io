@@ -14,3 +14,19 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
 });
+
+function yesFunc(e){
+    alert("I love you!");
+    document.getElementById("main-wrapper").style.display = "none";
+    document.getElementById("date-wrapper").style.display = "none";
+
+    document.getElementById(e).style.display = "block";
+}
+
+document.getElementById("yes-valentine").onclick = function(){
+    yesFunc('date-wrapper');
+}
+
+document.getElementById("yes-continue").onclick = function(){
+    yesFunc('food-wrapper');
+}
