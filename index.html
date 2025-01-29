@@ -2,41 +2,21 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#9825;</title>
+    <link rel="stylesheet" href="/valentinestyle.css">
 </head>
 
 <body>
-    <h3>Will you be my Valentine?</h3>
-    <img class="gif" alt="gif" src="https://media.tenor.com/9_Cuwoj-m5wAAAAi/cute-cat.gif" />
-    <div class="btn-group">
-        <button class="yes-btn">Yes!</button>
-        <button class="no-btn">No</button>
+    <div class="wrapper">
+        <h3 class="question">Will you be my Valentine? &#9825;</h3>
+        <img class="gif" alt="gif" src="https://media.tenor.com/9_Cuwoj-m5wAAAAi/cute-cat.gif" />
+        <div class="btn-group">
+            <button class="yes-btn">Yes!</button>
+            <button class="no-btn">No</button>
+        </div>
     </div>
-    <script>
-        const noBtn = document.querySelector(".no-btn");
-        noBtn.addEventListener("mouseover", () => {
-            const wrapper = document.querySelector(".wrapper");
-            const wrapperRect = wrapper.getBoundingClientRect();
-            const noBtnRect = noBtn.getBoundingClientRect();
-
-            // Calculate max positions to ensure the button stays within the wrapper
-            const maxX = wrapperRect.width - noBtnRect.width;
-            const maxY = wrapperRect.height - noBtnRect.height;
-
-            const randomX = Math.floor(Math.random() * maxX);
-            const randomY = Math.floor(Math.random() * maxY);
-
-            noBtn.style.left = randomX + "px";
-            noBtn.style.top = randomY + "px";
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
