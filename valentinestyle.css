@@ -17,16 +17,20 @@ body {
 span{
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 700px;
     text-align: center;
 }
 
 #main-wrapper{
-    display: none;
+    display: block;
 }
 
 #date-wrapper{
-    display: block;
+    display: none;
+}
+
+#food-wrapper{
+    display: none;
 }
 
 #final-wrapper{
@@ -37,8 +41,26 @@ h3 {
     font-size: 2em;
     margin: 15px 0;
     text-wrap: nowrap;
+    animation: text 5s ease-in-out infinite;
 }
 
+h4{
+    font-style: italic;
+    font-weight: 800;
+    font-size: .8rem;
+}
+
+@keyframes text {
+    0%{
+        color:#3a3a3a;
+    }
+    50%{
+        color:#f8bcbf;
+    }
+    100%{
+        color:#3a3a3a;
+    }
+}
 
 .gif {
     width: 100%;
@@ -77,29 +99,55 @@ button.no-btn {
 
 table{
     margin-top: 15px;
-    position: relative;
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px gray;
-    border: 1px solid rgb(218, 218, 218);
+    text-align: center;
 }
 
-input[type=checkbox]{
+input[type="checkbox"]{
     position: relative;
     top: 0;
     left: 0;
     height: 20px;
     width: 20px;
+    box-shadow: 0 1px 2px gray;
+    appearance: none;
+    background-color: white;
+}
+
+input[type=checkbox]:hover{
     background-color:#f58d94;
+    cursor: pointer;
+    
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ffb4b8;
+    border-color: black;
+}
+
+input[type=checkbox]:checked:before{
+    background-color: #ffb4b8;
+    content: '✔';
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+    left: 4px;
+    text-align: right;
+    color: white;
 }
 
 td{
-    font-size: 1.2rem;
-    align-items: center;
+    font-size: 1.25rem;
+    text-align: center;
+    padding-bottom: 10px;
+    text-wrap: nowrap;
 }
 
 table img{
-    max-width: 150px
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
 }
 
 img{

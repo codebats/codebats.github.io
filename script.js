@@ -19,6 +19,8 @@ function yesFunc(e){
     alert("I love you!");
     document.getElementById("main-wrapper").style.display = "none";
     document.getElementById("date-wrapper").style.display = "none";
+    document.getElementById("food-wrapper").style.display = "none";
+    document.getElementById("final-wrapper").style.display = "none";
 
     document.getElementById(e).style.display = "block";
 }
@@ -29,4 +31,8 @@ document.getElementById("yes-valentine").onclick = function(){
 
 document.getElementById("yes-continue").onclick = function(){
     yesFunc('food-wrapper');
+}
+
+document.getElementById("continue-two").onclick = function(){
+    yesFunc('final-wrapper');
 }
