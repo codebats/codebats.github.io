@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: whitesmoke;
+    background: #fcedee;
 }
 
 span{
@@ -19,6 +19,9 @@ span{
     width: 100%;
     max-width: 700px;
     text-align: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px
 }
 
 #main-wrapper{
@@ -100,6 +103,7 @@ button.no-btn {
 table{
     margin-top: 15px;
     text-align: center;
+    font-weight: 600;
 }
 
 input[type="checkbox"]{
@@ -138,7 +142,7 @@ input[type=checkbox]:checked:before{
 td{
     font-size: 1.25rem;
     text-align: center;
-    padding-bottom: 10px;
+    
     text-wrap: nowrap;
 }
 
@@ -158,7 +162,7 @@ hr{
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid whitesmoke;
+    border-top: 1px solid white;
     margin: .5em 0;
     padding: 0;
 }
